@@ -3,6 +3,10 @@ import Blackfish
 
 public class StencilRenderer: Renderer {
 
+    public init() {
+        // Allows for a public initialiser
+    }
+
     public func render(path: String, data: [String: Any]? = nil) throws -> String  {
         let data = data ?? [:]
         let c = Context(dictionary: data)
