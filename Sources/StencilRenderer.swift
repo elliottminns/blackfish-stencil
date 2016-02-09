@@ -11,6 +11,8 @@ public class StencilRenderer: Renderer {
         let data = data ?? [:]
         let c = Context(dictionary: data)
         let template = Template(templateString: path)
+        let body = try template.render(c)
+        print(body)
         return try template.render(c)
     }
 }
