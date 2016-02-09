@@ -8,13 +8,12 @@ public class StencilRenderer: Renderer {
     }
 
     public func render(path: String, data: [String: Any]? = nil) throws -> String  {
-        
+
         let fileString = try stringFromFile(path)
 
         let data = data ?? [:]
         let c = Context(dictionary: data)
         let template = Template(templateString: fileString)
-        let body = try template.render(c)
 
         return try template.render(c)
     }
