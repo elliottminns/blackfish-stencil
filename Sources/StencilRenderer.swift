@@ -10,7 +10,7 @@ public class StencilRenderer: Renderer {
     public func render(path: String, data: [String: Any]? = nil) throws -> String  {
         let data = data ?? [:]
         let c = Context(dictionary: data)
-        let template = Template(named: path)
+        let template = try Template(named: path)
         let body = try template.render(c)
         print(body)
         return try template.render(c)
