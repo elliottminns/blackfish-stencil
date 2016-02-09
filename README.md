@@ -18,7 +18,7 @@ import BlackfishStencil
 
 let app = Blackfish()
 
-app.use(renderer: BlackfishStencil(), ext: ".stencil")
+app.use(renderer: StencilRenderer(), ext: ".stencil")
 
 app.listen(port: 3000) { error in
 
