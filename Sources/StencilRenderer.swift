@@ -11,7 +11,8 @@ public class StencilRenderer: Renderer {
 
         let fileString = try stringFromFile(path)
 
-        let data = data ?? [:]
+        var data = data ?? [:]
+        data["loader"] = TemplateLoader(bundle:[NSBundle.mainBundle()])
         let c = Context(dictionary: data)
         let template = Template(templateString: fileString)
 
