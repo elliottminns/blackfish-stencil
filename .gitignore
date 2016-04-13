@@ -6,3 +6,4 @@ Resources
 .DS_Store
 *.swp
 */xcuserdata/
+Carthage/
