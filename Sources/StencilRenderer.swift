@@ -10,7 +10,7 @@ public class StencilRenderer: Renderer {
 
     public func render(path: String, data: [String: Any]? = nil) throws -> String  {
 
-        let fileString = try stringFromFile(path)
+        let fileString = try stringFromFile(path: path)
 
         var data = data ?? [:]
         if let bundle = NSBundle(path: "Resources") {
